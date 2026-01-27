@@ -31,11 +31,7 @@ export const hotelGallery: MediaGallery = {
     {
       type: "image",
       image: "/hotel3.jpg",
-    },
-    {
-      type: "image",
-      image: "/hotel.GIF",
-    },
+    }
   ],
 };
 
