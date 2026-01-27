@@ -17,10 +17,11 @@ import { afterHeroVideo } from "@/data/mediaSwiperData";
 import { useTranslations } from "next-intl";
 
 // Media Item Component for individual items
-const MediaItem = ({ item, isActive, isMuted, toggleMute, objectFit = "contain", onLoadComplete }) => {
+const MediaItem = ({ item, isActive, isMuted, toggleMute, objectFit = "contain", onLoadComplete, isMobile = false }) => {
   const videoRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [isVideoLoading, setIsVideoLoading] = useState(true);
+  const [hasUserInteracted, setHasUserInteracted] = useState(false);
   const t = useTranslations("mediaSwiper");
   // Get image URL helper 
   const getImageUrl = (image) => {
@@ -46,26 +47,44 @@ const MediaItem = ({ item, isActive, isMuted, toggleMute, objectFit = "contain",
     }
   }, []);
 
+  // Reset user interaction when item changes
+  useEffect(() => {
+    setHasUserInteracted(false);
+    setIsPlaying(false);
+  }, [item.video, item.videoUrl]);
+
   useEffect(() => {
     if (videoRef.current) {
       if (isActive) {
-        videoRef.current.play().catch(() => {});
+        // On mobile, only autoplay if user has interacted
+        if (isMobile && !hasUserInteracted) {
+          // Don't autoplay on mobile until user clicks
+          return;
+        }
+        videoRef.current.play().catch((err) => {
+          // If autoplay fails, video will need user interaction
+          console.log("Autoplay prevented:", err);
+        });
         setIsPlaying(true);
       } else {
         videoRef.current.pause();
         setIsPlaying(false);
       }
     }
-  }, [isActive]);
+  }, [isActive, isMobile, hasUserInteracted]);
 
   const handleVideoClick = () => {
     if (videoRef.current) {
+      setHasUserInteracted(true);
       if (isPlaying) {
         videoRef.current.pause();
         setIsPlaying(false);
       } else {
-        videoRef.current.play();
-        setIsPlaying(true);
+        videoRef.current.play().then(() => {
+          setIsPlaying(true);
+        }).catch((err) => {
+          console.log("Play failed:", err);
+        });
       }
     }
   };
@@ -212,8 +231,8 @@ const MediaItem = ({ item, isActive, isMuted, toggleMute, objectFit = "contain",
           muted={isMuted}
           playsInline
           preload="auto"
-          poster={item.poster || ""}
           onClick={handleVideoClick}
+          onTouchStart={handleVideoClick}
           onLoadedMetadata={() => {
             if (videoRef.current?.readyState >= 3) {
               setIsVideoLoading(false);
@@ -232,33 +251,42 @@ const MediaItem = ({ item, isActive, isMuted, toggleMute, objectFit = "contain",
             setIsVideoLoading(false);
             onLoadComplete?.();
           }}
+          onPlay={() => {
+            setIsPlaying(true);
+          }}
+          onPause={() => {
+            setIsPlaying(false);
+          }}
           onError={() => {
             setIsVideoLoading(false);
             onLoadComplete?.();
           }}
         />
         
-        {/* Video Controls Overlay */}
+        {/* Video Controls Overlay - Always visible on mobile, hover on desktop */}
         {!isVideoLoading && (
-          <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <div className={`absolute inset-0 flex items-center justify-center ${isMobile || !isPlaying ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'} transition-opacity duration-300`}>
             <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              onClick={handleVideoClick}
-              className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 flex items-center justify-center text-white"
+              onClick={(e) => {
+                e.stopPropagation();
+                handleVideoClick();
+              }}
+              className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 flex items-center justify-center text-white shadow-lg"
             >
-              {isPlaying ? <Pause className="w-8 h-8" /> : <Play className="w-8 h-8 ml-1" />}
+              {isPlaying ? <Pause className="w-8 h-8 md:w-10 md:h-10" /> : <Play className="w-8 h-8 md:w-10 md:h-10 ml-1" />}
             </motion.button>
           </div>
         )}
        
-        {/* Mute Button */}
+        {/* Mute Button - Always visible on mobile */}
         {!isVideoLoading && (
           <motion.button
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             onClick={toggleMute}
-            className="absolute bottom-4 right-4 w-10 h-10 rounded-full bg-black/40 backdrop-blur-sm flex items-center justify-center text-white border border-white/20 opacity-0 group-hover:opacity-100 transition-opacity"
+            className={`absolute bottom-4 right-4 w-10 h-10 rounded-full bg-black/40 backdrop-blur-sm flex items-center justify-center text-white border border-white/20 ${isMobile ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'} transition-opacity`}
           >
             {isMuted ? <VolumeX className="w-5 h-5" /> : <Volume2 className="w-5 h-5" />}
           </motion.button>
@@ -522,6 +550,7 @@ const MediaSwiper = ({
             toggleMute={() => setIsMuted(!isMuted)}
             objectFit={objectFit}
             onLoadComplete={handleMediaLoaded}
+            isMobile={isMobile}
           />
         </motion.div>
       </AnimatePresence>
