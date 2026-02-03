@@ -9,11 +9,10 @@ import { SectionDivider } from "@/components/ui/SectionDivider";
 import Experiences from "@/components/home/Experiences";
 import SpaceshipIntro from "@/components/SpaceshipIntro";
 import { motion } from "framer-motion";
-import WhyChooseUs from "@/components/home/WhyChooseUs";
 import AboutBedouin from "@/components/home/AboutBedouin";
 import DesertTrip from "@/components/home/DesertTrip";
 import MediaSwiper from "@/components/MediaSwiper";
-import { hotelGallery } from "@/data/mediaSwiperData";
+import { hotelGallery, DesertComparison as DesertComparisonMedia } from "@/data/mediaSwiperData";
 import ReviewsVideos from "@/components/home/ReviewsVideos";
 import DesertComparison from "@/components/home/DesertComparison";
 import DesertFeeling from "@/components/home/DesertFeeling";
@@ -21,6 +20,8 @@ import TripForYou from "@/components/home/TripForYou";
 import PriceAction from "@/components/home/PriceAction";
 import Guarantees from "@/components/home/Guarantees";
 import ContactForm from "@/components/home/ContactForm";
+import TripInstructions from "@/components/home/TripInstructions";
+
 
 const Home = () => {
   const [showIntro, setShowIntro] = useState(true);
@@ -42,15 +43,15 @@ const Home = () => {
         <SectionDivider />
         <TripForYou />
         <SectionDivider />
-        <DesertComparison />
-        <SectionDivider />
-        <DesertFeeling />
-
-        <SectionDivider />
-        <WhyChooseUs />
-        <SectionDivider />
-        <Experiences />
-
+        <div className="container mx-auto px-4 py-8">
+          <MediaSwiper
+            customMedia={DesertComparisonMedia}
+            height="h-[500px] md:h-[600px]"
+            className="rounded-2xl overflow-hidden border border-[#F47A1F]/20 shadow-xl shadow-[#F47A1F]/10"
+            objectFit="contain"
+            intervalDefault={15}
+          />
+        </div>
         <SectionDivider />
         <AboutBedouin />
         <SectionDivider />
@@ -79,12 +80,13 @@ const Home = () => {
             { id: "i4w2WfMh-fw" },
                     ]} 
         />
-        <Guarantees />
+      {/*   <Guarantees />
         <SectionDivider />
         <FAQ />
         
-        <SectionDivider />
+        <SectionDivider /> */}
         <PriceAction />
+        <TripInstructions />
         <ContactForm />
 
         <ReviewsVideos 

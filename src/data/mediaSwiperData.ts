@@ -9,11 +9,11 @@ type MediaGallery = {
   media: MediaItem[];
 };
 
-export const afterHeroVideo: MediaGallery = {
+export const afterHero: MediaGallery = {
   media: [
     {
-      type: "video",
-      video: "/real.mp4",
+      type: "image",
+      image: "/hero.png",
     },
   ],
 };

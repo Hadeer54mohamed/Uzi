@@ -13,7 +13,7 @@ import {
   Image as ImageIcon,
   Video
 } from "lucide-react";
-import { afterHeroVideo } from "@/data/mediaSwiperData";
+import { afterHero } from "@/data/mediaSwiperData";
 import { useTranslations } from "next-intl";
 
 // Media Item Component for individual items
@@ -379,7 +379,7 @@ const MediaSwiper = ({
 }) => {
   const t = useTranslations("mediaSwiper");
   
-  const mediaData = customMedia || afterHeroVideo;
+  const mediaData = customMedia || afterHero;
   
   const getGalleryData = () => {
     if (!mediaData) return null;

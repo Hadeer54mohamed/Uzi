@@ -11,27 +11,10 @@
     "bookNow": "Book Now"
   },
   "hero": {
-    "title": "A Space Journey… In the ",
-    "titleHighlight": "White Desert",
-    "inHeart": " Heart of",
-    "subtitle": " where you'll leave everything behind…",
-    "days": "3",
-    "daysText": "Days",
-    "subtitleContinue": "and enter another world of",
-    "strangenessAndBeauty": "strangeness and beauty",
-    "subtitle2": "This is not a tourist trip… it's",
-    "subtitle2Highlight": "and not suitable for everyone.",
-    "subtitle2Continue": "an experience you'll live with the desert people,",
-    "realExperience": "A real experience organized by",
-    "subtitle3Continue": "A real experience organized by",
-    "bedouinSpecialist2": "Farafra Oasis Bedouins",
-    "experience": "With over",
-    "years": "26 years",
-    "andExecuted": "and a thousand trips",
-    "insideReserve": " in one of",
-    "whiteDesert": "the world's most amazing reserves",
-    "subtitle3": "This trip is fully organized by Farafra Oasis Bedouins,",
-    "subtitle3Highlight": "and every detail is calculated so you can live the experience with peace of mind.",
+    "title": "A Journey in the Heart of the White Desert",
+    "partBoldStart": "Three days",
+    "partNormal": "You'll leave everything behind…",
+    "partBoldEnd": "and explore a new world of calm, beauty, and real adventure",
     "bookingButton": "Book Your Spot Now",
     "limitedSpots": "Limited spots available"
   },
@@ -145,28 +128,18 @@
     "bookingButton": "Book Your Spot Now",
     "limitedSpots": "Limited spots available"
   },
-  "aboutBedouin": {
-    "badge": "Who's taking you on the trip?",
-    "title": "We're not just organizers,",
-    "titleHighlight": "We're the owners of the place",
-    "description": "We are the Bedouins of Farafra Oasis, the people and guardians of the White Desert. We offer an experience that comes from the heart of the place itself. Camping with us is a complete life, not just accommodation, with simplicity, comfort, and real adventure in nature we respect and preserve.",
-    "quote": "Our experience in the White Desert spans over 26 years, we know its roads, seasons, fluctuations, and every detail. We've executed the same programs thousands of times with people from around the world, and safety and responsibility have always been the foundation.",
-    "stats": {
-      "experience": "Years of Experience",
-      "trips": "Successful Trips",
-      "clients": "Happy Clients",
-      "safety": "Safety & Responsibility",
-      "experienceDesc": "Years of Experience",
-      "experienceDesc2": "in the Heart of the Desert"
-    },
-    "teamTitle": "Our Team at UzerSaif",
-    "teamDescription": "A professional team that understands the nature of the desert and provides an honest and warm experience. Committed to reserve laws, caring for the environment,",
-    "teamHighlight": "and with any situation, we find an immediate solution.",
-    "promise": "We promise you a different experience...",
-    "promiseHighlight": "Not because we're selling a trip, we're sharing a part of our lives with you.",
-    "bookingButton": "Book Your Spot Now",
-    "limitedSpots": "Limited spots available"
-  },
+ "aboutBedouin": {
+  "badge": "About the Bedouins of Farafra",
+  "description": "*We are the Bedouins of Farafra Oasis, the people and guardians of the White Desert.* We offer an experience that comes straight from the heart of the place itself. *For us, camping is a complete way of life, not just accommodation* — filled with simplicity, comfort, *and real adventure* in a nature we truly love and protect because it’s part of who we are.",
+  "quote": "*Our experience in the White Desert spans more than 26 years* — we know its routes, seasons, and secrets by heart. Every trip we organize is built on real knowledge and authentic experience. *We’ve run the same programs thousands of times* with adventurers from different countries around the world.",
+  "teamTitle": "Our Team at UzerSaif",
+  "teamDescription": "A professional team that truly understands the desert and delivers a genuine, warm experience. We are committed to reserve regulations and deeply care about the environment,",
+  "teamHighlight": "and we always find an immediate solution in any situation.",
+  "promise": "We promise you a different kind of experience...",
+  "promiseHighlight": "Not because we sell trips — but because we share a part of our life with you.",
+  "bookingButton": "Book your spot now",
+  "limitedSpots": "Limited spots available"
+},
   "faq": {
     "title": "Frequently Asked Questions",
     "subtitle": "Answers to the most common questions our clients ask",
@@ -281,21 +254,14 @@
   },
   "tripForYou": {
     "title": "Is This Trip For You?",
-    "forYouTitle": "This trip is for you if:",
-    "notForYouTitle": "Not for you if:",
+    "forYouTitle": "This trip is for you if...?",
     "forYou": {
-      "psychological": "Travel for you is a *psychological need* for rest, not just breaking routine",
-      "travelOften": "*You travel often…* but rarely come back feeling truly rested",
-      "quietPlace": "You need a *quiet place,* with no demands, no schedules, no loud sounds",
-      "leavePhone": "*You can leave your phone* aside for a while, without feeling like you're missing out",
-      "respectPlace": "*You respect the places you visit* and love to experience the adventure through the eyes of its people"
-    },
-    "notForYou": {
-      "noise": "You don't like *photography* or don't want to take the best photos",
-      "network": "You want to move from place to place *without stopping or enjoying*",
-      "travelToSay": "*You travel just to say you traveled*",
-      "needNetwork": "*You need network all the time*",
-      "notReady": "You're not ready to leave the city rhythm *even when you're away from it*"
+      "psychological": "If you want a *different trip* in the strangest reserves in Egypt",
+      "travelOften": "If *safety* is your priority and you like to see places *through the eyes of locals (Bedouins)*",
+      "quietPlace": "If you like to live the moment among *stars, fire, sky, and silence*",
+      "leavePhone": "If you like *comfortable organization*, especially if it's your first time *camping*",
+      "respectPlace": "If you're looking for *the experience more than luxury*",
+      "images": "If you love photography and want to *take amazing photos*"
     },
     "bedouinBox": {
       "title": "We are the Bedouins of Farafra Oasis",
@@ -378,7 +344,9 @@
   "desertTrip": {
     "exploreTitle": "Explore",
     "exploreHighlight": "Our Adventures",
-    "gatheringPoints": "Gathering Points",
+    "gatheringPoints": "Meeting Point",
+    "gatheringLocation": "Go Bus booking office – Abdel Moneim Riad",
+    "gatheringTime": "Thursday 10:30 PM",
     "tripProgram": "Trip Program",
     "remainingSeats": "Remaining Seats:",
     "of": "of",
@@ -399,7 +367,18 @@
     "account": "Account",
     "guaranteeTitle": "Farafra Oasis Bedouin Guarantee",
     "guaranteeNote": "Camping with us isn't a hotel… but we're Bedouins, and our word is our honor.",
-    "importantNote": "Please send your ID photo and transfer screenshot to book the hotel and obtain security permits",
+    "importantNote": "Please send your ID or passport photo",
+    "importantNoteTitle": "To start permits",
+    "title": "*Booking & Payment*",
+    "paymentInfo": "25% deposit, remaining 2 days before the trip",
+    "paymentMethods": "You can pay via ( *InstaPay* - *Banque Misr* - *National Bank of Egypt* - *Vodafone Cash* with *2% fees* )",
+    "noticeTitle": "*Before booking, please note*",
+    "notices": [
+      "Weather is *mild during the day and cold at night*",
+      "*Network is weak* and almost non-existent during camping",
+      "*Program is flexible* and may change due to *weather or security conditions* while ensuring a *safe and comfortable experience*",
+      "What you need is simple: *your clothes*, *personal belongings*, and following trip instructions"
+    ],
     "subscribeNow": "I want to subscribe now",
     "loading": "Loading...",
     "whatsappMessage": "Hello Uzer Saif, I'd like to book my spot in \"{title}\". Can you share the details?",
@@ -420,37 +399,35 @@
           "day1": {
             "title": "Day One – Friday",
             "activities": [
-              "Visit the most unique cave in Egypt and the Petrified Geological Forest",
-              "Arrival at Uzersaif Camp in Farafra Oasis + authentic Egyptian breakfast",
-              "Start the 4×4 safari adventure",
-              "Valley of Obstacles and Moon Cave",
-              "Sandboarding experience",
-              "Light lunch at Ain Khadra",
-              "Visit the Moon Surface area",
-              "Formations tour (Mushroom, Chicken, Rabbit, Horse, Camel, Sphinx)",
-              "BBQ dinner with Bedouin marinade + stargazing night with Zarda tea"
+              "05:30 AM: Visit El-Gara Cave (the strangest cave in Egypt)",
+              "09:00 AM: Arrival at Uzersaif Camp in Farafra Oasis + Egyptian breakfast (camp equipped with bathroom and electricity)",
+              "10:00 AM: Start moving *with 4x4 safari vehicles and visiting:*|Valley of Obstacles|Moon Cave|Sandboarding|Hanes Valley|2:00 PM: Ain Khadra (light lunch)|Ice House – Moon Surface|Camps Valley|Famous formations: Mushroom – Chicken – Rabbit – Horse – Camel – Sphinx",
+              "5:00 PM: At sunset: Setting up camp – receiving tents and sleeping equipment",
+              "9:00 PM: BBQ dinner with Bedouin marinade + stargazing night with fire and Zarda tea"
             ]
           },
           "day2": {
             "title": "Day Two – Saturday",
             "activities": [
               "Sunrise + Bedouin breakfast in the heart of the desert",
-              "Check into Bedouin hotel and rest for 3 hours",
-              "Light lunch at UzerSaif Camp",
-              "Farafra Palace and Amina House (Farafra Oasis heritage)",
-              "Oasis gardens and Roman springs (beginning of life in the oasis)",
-              "Badr Abdel Moghny Museum (international museum)",
-              "Bedouin party night",
-              "Mandi dinner with secret Bedouin marinade"
+              "8:00 AM: Breaking camp and returning to Farafra Oasis",
+              "10:30 AM: Check into Bedouin hotel – 3 hours rest",
+              "2:00 PM: Head to UzerSaif Camp (light lunch)",
+              "Farafra Palace and Amina House",
+              "Oasis gardens and Roman springs",
+              "Badr Abdel Moghny Museum (world heritage)",
+              "9:00 PM: Bedouin Mizmar party + Mandi dinner"
             ]
           },
           "day3": {
             "title": "Day Three – Sunday",
             "activities": [
-              "Visit Crystal Mountain (the most valuable mountain in Egypt)",
-              "Visit the Black Desert and volcanic mountains",
-              "Market (to buy oasis products)",
-              "Return to Cairo around 10:00 PM"
+              "08:00 AM: Leave rooms + breakfast at UzerSaif Camp",
+              "10:45 AM: Visit Crystal Mountain",
+              "11:45 AM: Tea session by the Roman springs",
+              "12:45 PM: Visit Black Desert volcanoes",
+              "3:00 PM: Stop to buy oasis products",
+              "Arrival in Cairo: 10:00 PM"
             ]
           }
         },
@@ -486,5 +463,17 @@
         }
       }
     }
+  },
+  "instructions": {
+    "title": "*Instructions*",
+    "items": [
+      "Pack light - bring only *essentials and personal items*",
+      "Morning is *warm*, afternoon is *pleasant*, night gets *cold*",
+      "*Comfortable clothes* for movement and sand, don't forget your *sunglasses and cap*",
+      "Shoes are *the most important thing* - sandals, crocs, or flip-flops work",
+      "Don't forget a *flashlight* or use your phone flash & *power bank*",
+      "Don't forget *sunscreen* and *moisturizer*",
+      "If you love *coffee*, bring your favorite beans"
+    ]
   }
 }
