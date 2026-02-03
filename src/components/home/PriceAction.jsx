@@ -150,7 +150,7 @@ const PriceAction = () => {
           </motion.div>
 
           {/* Booking Method */}
-          <motion.div
+        {/*   <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -176,14 +176,14 @@ const PriceAction = () => {
                 <span className="font-black text-[#F5F7FA] text-sm">{trip.bookingSteps.accountName}</span>
               </div>
             </div>
-          </motion.div>
+          </motion.div> */}
           
           {/* Subscribe Note */}
-          <div className="w-full bg-[#F47A1F]/10 backdrop-blur-sm border border-[#F47A1F]/30 rounded-xl p-4 sm:p-5">
+         {/*  <div className="w-full bg-[#F47A1F]/10 backdrop-blur-sm border border-[#F47A1F]/30 rounded-xl p-4 sm:p-5">
             <p className="text-[#FFB85C] font-bold text-[clamp(1rem,3.5vw,1.5rem)] md:text-sm text-center leading-relaxed">
               {t("subscribeNow")}
             </p>
-          </div>
+          </div> */}
 
           {/* After Booking Section */}
           <motion.div

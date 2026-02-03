@@ -32,12 +32,10 @@ const TripInstructions = () => {
   return (
     <div className="bg-black/90 backdrop-blur-sm border border-[#F47A1F]/20 rounded-2xl p-6 space-y-6 container mx-auto my-8">
 
-      {/* العنوان */}
       <h3 className="text-[#F47A1F] text-3xl font-[900] text-center">
         {t("title").replace(/\*/g, "")}
       </h3>
 
-      {/* الليست */}
       <div className="space-y-4 text-white text-lg text-center">
   {items?.map((item, idx) => (
     <div

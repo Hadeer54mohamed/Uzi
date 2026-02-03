@@ -35,7 +35,7 @@ const TripForYou = () => {
   };
 
   return (
-    <section className="relative py-10 sm:py-20 overflow-hidden bg-black text-white">
+    <section className="relative py-10  overflow-hidden bg-black text-white">
       {/* Ambient Glow - Centered */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#F47A1F]/10 blur-[180px] rounded-full pointer-events-none" />
 

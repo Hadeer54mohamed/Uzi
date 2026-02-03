@@ -30,19 +30,27 @@ const Hero = () => {
 
   return (
     <section
-      ref={heroRef}
-      className="relative flex flex-col items-center justify-center overflow-hidden min-h-[60vh] md:min-h-[70vh] pt-16 md:pt-20"
-    >
+    ref={heroRef}
+    className="relative flex flex-col items-center justify-center overflow-hidden 
+               min-h-[70vh] md:min-h-[80vh] lg:min-h-[90vh] 
+               pt-16 md:pt-20"
+  >
+  
 
       {/* Background with Parallax */}
       <motion.div
         style={{ y: yTransform }}
         className="absolute inset-0 z-0 pointer-events-none overflow-hidden"
       >
-
+        {/* Background Image */}
+        <img 
+          src="/hero.png" 
+          alt="Hero Background" 
+          className="absolute inset-0 w-full h-full object-cover"
+        />
         {/* 🌌 Cosmic Overlay */}
-        <div className="absolute inset-0 overlay-hero" />
-      </motion.div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/60" />
+        </motion.div>
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center">
@@ -71,11 +79,11 @@ const Hero = () => {
 
         </motion.div>
 
-        <MediaSwiper
+       {/*  <MediaSwiper
           customMedia={afterHero}
           height="h-[300px] xs:h-[350px] sm:h-[450px] md:h-[550px] lg:h-[650px]"
           className="container mx-auto px-4  "
-        />
+        /> */}
 
         {/* Booking CTA */}
         <motion.div
