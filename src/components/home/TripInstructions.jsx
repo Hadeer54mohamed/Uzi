@@ -30,7 +30,7 @@ const TripInstructions = () => {
   };
 
   return (
-    <div className="bg-black/90 backdrop-blur-sm border border-[#F47A1F]/20 rounded-2xl p-6 space-y-6 container mx-auto my-8">
+    <div className="bg-black/90 backdrop-blur-sm border border-[#F47A1F]/20 rounded-2xl p-6 space-y-6 container mx-auto mt-8">
 
       <h3 className="text-[#F47A1F] text-3xl font-[900] text-center">
         {t("title").replace(/\*/g, "")}

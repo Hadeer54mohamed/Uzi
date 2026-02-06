@@ -2,6 +2,7 @@ type MediaItem = {
   type: "video" | "image";
   video?: string;
   image?: string;
+  imageMobile?: string;
   poster?: string;
 };
 
@@ -20,18 +21,10 @@ export const afterHero: MediaGallery = {
 
 export const hotelGallery: MediaGallery = {
   media: [
-    {
-      type: "image",
-      image: "/hotel1.jpg",
-    },
-    {
-      type: "image",
-      image: "/hotel2.jpg",
-    },
-    {
-      type: "image",
-      image: "/hotel3.jpg",
-    }
+    { type: "image", image: "/hotel/hotel1.jpg", imageMobile: "/hotel1.jpg" },
+    { type: "image", image: "/hotel/hotel2.jpg", imageMobile: "/hotel2.jpg" },
+    { type: "image", image: "/hotel/hotel3.jpg", imageMobile: "/hotel3.jpg" },
+    { type: "image", image: "/hotel4.jpg", imageMobile: "/hotel4.jpg" },
   ],
 };
 

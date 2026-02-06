@@ -6,7 +6,6 @@ import FAQ from "@/components/home/FAQ";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { SectionDivider } from "@/components/ui/SectionDivider";
-import Experiences from "@/components/home/Experiences";
 import SpaceshipIntro from "@/components/SpaceshipIntro";
 import { motion } from "framer-motion";
 import AboutBedouin from "@/components/home/AboutBedouin";
@@ -14,14 +13,11 @@ import DesertTrip from "@/components/home/DesertTrip";
 import MediaSwiper from "@/components/MediaSwiper";
 import { hotelGallery, DesertComparison as DesertComparisonMedia } from "@/data/mediaSwiperData";
 import ReviewsVideos from "@/components/home/ReviewsVideos";
-import DesertComparison from "@/components/home/DesertComparison";
-import DesertFeeling from "@/components/home/DesertFeeling";
 import TripForYou from "@/components/home/TripForYou";
 import PriceAction from "@/components/home/PriceAction";
-import Guarantees from "@/components/home/Guarantees";
 import ContactForm from "@/components/home/ContactForm";
 import TripInstructions from "@/components/home/TripInstructions";
-
+import Image from "next/image";
 
 const Home = () => {
   const [showIntro, setShowIntro] = useState(true);
@@ -30,7 +26,7 @@ const Home = () => {
     <>
       {showIntro && <SpaceshipIntro onComplete={() => setShowIntro(false)} />}
 
-      <div className="min-h-screen relative z-10">
+      <div className="min-h-screen relative z-10 w-full overflow-x-hidden">
         <Navbar transparent />
 
         <motion.div
@@ -40,32 +36,71 @@ const Home = () => {
         >
           <Hero />
         </motion.div>
-        <SectionDivider />
-        <TripForYou />
-        <SectionDivider />
-        <div className="container mx-auto px-4 py-8">
-          <MediaSwiper
-            customMedia={DesertComparisonMedia}
-            height="h-[500px] md:h-[600px]"
-            className="rounded-2xl overflow-hidden border border-[#F47A1F]/20 shadow-xl shadow-[#F47A1F]/10"
-            objectFit="contain"
-            intervalDefault={15}
-          />
+        {/*   <PhotoGrid /> */}
+        <div className="bg-black">
+
+          <div className="md:hidden">
+            <TripForYou />
+          </div>
+
+          <div className="md:hidden px-4 py-6">
+            <div className="relative w-full h-[250px] rounded-3xl overflow-hidden">
+              <Image
+                src="/moucup3.png"
+                className="w-full h-full object-cover"
+                alt="PhotoGrid"
+                fill
+                sizes="100vw"
+              />
+            </div>
+          </div>
+
+          <div className="md:hidden">
+            <AboutBedouin />
+          </div>
+
+          <div className="hidden md:flex md:flex-row md:items-stretch">
+            <div className="w-1/3 flex">
+              <TripForYou />
+            </div>
+            <div className="w-2/3 flex">
+              <AboutBedouin />
+            </div>
+          </div>
+
+          <div className="hidden md:block px-6 py-10">
+            <div className="relative w-full h-[400px] lg:h-[450px] rounded-3xl overflow-hidden max-w-5xl mx-auto">
+              <Image
+                src="/moucup3.png"
+                className="w-full h-full object-cover"
+                alt="PhotoGrid"
+                fill
+                sizes="80vw"
+              />
+            </div>
+          </div>
         </div>
         <SectionDivider />
-        <AboutBedouin />
-        <SectionDivider />
+
         <DesertTrip />
-        <MediaSwiper
-          customMedia={hotelGallery}
-          height="h-[600px]"
-          className="container mx-auto px-4"
-          objectFit="contain"
-          intervalDefault={15}
-        />
-        <SectionDivider />
-        <ReviewsVideos 
-          id="reviews" 
+        <div className="flex flex-col md:flex-row md:flex-nowrap md:items-stretch w-full container mx-auto px-4 gap-4 md:gap-3">
+          <div className="w-full md:w-1/2 md:min-w-0 flex flex-col md:overflow-hidden">
+            <MediaSwiper
+              customMedia={hotelGallery}
+              height="h-[400px] md:h-[460px]"
+              className="w-full flex-1 min-h-0 pt-8 md:max-w-full"
+              objectFit="cover"
+              intervalDefault={5}
+            />
+          </div>
+          <div className="w-full md:w-1/2 md:min-w-0 flex flex-col md:h-full">
+            <PriceAction />
+          </div>
+        </div>
+        <ContactForm />
+
+        <ReviewsVideos
+          id="reviews"
           videos={[
             { id: "QViYDcYGl34" },
             { id: "-aUqfhZNjPQ" },
@@ -78,23 +113,6 @@ const Home = () => {
             { id: "yeYdMzvLTXk" },
             { id: "jdI3GoGe9XI" },
             { id: "i4w2WfMh-fw" },
-                    ]} 
-        />
-      {/*   <Guarantees />
-        <SectionDivider />
-        <FAQ />
-        
-        <SectionDivider /> */}
-        <PriceAction />
-        <TripInstructions />
-        <ContactForm />
-
-        <ReviewsVideos 
-          id="companies-reviews" 
-          layout="grid"
-          showHeader={true}
-          showCTA={true}
-          videos={[
             { id: "teb8R0GzsZY" },
             { id: "I6bBE2nX3o4" },
             { id: "yYJvqp7E7Fc" },
@@ -105,8 +123,10 @@ const Home = () => {
             { id: "7asO-BWZZ0w" },
             { id: "59R8g9EeNeQ" },
             { id: "CserZezSSew" },
-          ]} 
-        />
+          ]} />
+
+        <FAQ />
+        <TripInstructions />
         <Footer />
       </div>
     </>

@@ -6,7 +6,7 @@ export const dummyTrips = [
     _id: "white-desert-premium",
     slug: "white-desert-premium",
     translationKey: "white-desert-premium",
-    image: "/trip-desert.jpg", 
+    image: "/moucup5.png", 
     
     // Prices and discounts (numbers only)
     price: 6499,
@@ -24,7 +24,7 @@ export const dummyTrips = [
     // Day icons for itinerary
     itineraryIcons: {
       day1: ["🕳️", "🍳", "🚙", "🌅", "🔥"],
-      day2: ["🌅", "🚐", "🏨", "🍽️", "🏛️", "🌿", "🎨", "🎶"],
+      day2: ["🌅", "🚐", "🏨", "🍽️", "🏛️", "🎶"],
       day3: ["🍳", "💎", "☕", "🌋", "🛍️", "🏠"],
     },
 

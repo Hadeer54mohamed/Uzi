@@ -13,6 +13,7 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-cairo);
+  --font-heading: var(--font-el-messiri);
   --font-mono: var(--font-geist-mono);
   
   /* Cosmic Desert Colors */
@@ -58,18 +59,22 @@
   --color-destructive-foreground: hsl(var(--destructive-foreground));
 }
 
+html {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: 'Cairo', Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+  max-width: 100vw;
+  min-height: 100vh;
 }
 
 /* ===== Cosmic Desert Theme System ===== */
-/* 
-  🌌🪐 Cosmic Desert – Farafra Oasis
-  نجوم وفضاء لا نهائي فوق…
-  ورمل دافي ونار صحرا تحت 🌠🔥
-*/
+
 
 @layer base {
   :root {
@@ -157,6 +162,12 @@ body {
 }
 
 @layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
   * {
     border-color: hsl(var(--border));
   }
@@ -164,8 +175,9 @@ body {
   body {
     @apply bg-background text-foreground;
     font-family: 'Cairo', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    font-size: 0.8rem; 
+    font-size: clamp(0.875rem, 2.2vw, 1rem);
     line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
   }
   
   h1, h2, h3, h4, h5, h6 {
@@ -486,5 +498,13 @@ body {
 /* RTL Support */
 .reviews-videos-swiper[dir="rtl"] .swiper-wrapper {
   direction: rtl;
+}
+
+/* ===== Mobile: prevent horizontal overflow ===== */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
 

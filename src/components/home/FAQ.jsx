@@ -9,7 +9,6 @@ import {
   generateStars,
   generateMeteors,
 } from "@/components/SpaceElements";
-import BeforeBookingSlider from "./BeforeBookingSlider";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 
@@ -70,9 +69,7 @@ const FAQ = () => {
           <h2 className="text-[clamp(1.5rem,5vw,3rem)] font-bold mb-2 sm:mb-3 text-primary md:text-4xl md:font-extrabold">
             {t("title")}
           </h2>
-          <p className="text-[clamp(1.25rem,4vw,2.2rem)] font-bold max-w-2xl mx-auto text-secondary md:text-lg md:font-normal">
-            {t("subtitle")}
-          </p>
+        
         </div>
         {/* FAQ Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
@@ -89,7 +86,7 @@ const FAQ = () => {
                 <button
                   onClick={() => toggleItem(faq.id)}
                   aria-expanded={isOpen}
-                  className="w-full flex justify-center items-center gap-2 text-[clamp(1.25rem,4vw,2.2rem)] font-bold transition-colors faq-question md:text-xl"
+                  className="font-heading w-full flex justify-center items-center gap-2 text-[clamp(1.25rem,4vw,2.2rem)] font-bold transition-colors faq-question md:text-xl"
                 >
                   {question}
                   <ChevronDown
@@ -136,7 +133,6 @@ const FAQ = () => {
             );
           })}
         </div>
-        <BeforeBookingSlider />
 
       </div>
 

@@ -1,4 +1,4 @@
-import { Cairo } from "next/font/google";
+import { Cairo, El_Messiri } from "next/font/google";
 import "../globals.css";
 import { Toaster } from "sonner";
 import { NextIntlClientProvider } from "next-intl";
@@ -10,13 +10,25 @@ import Script from "next/script";
 
 const cairo = Cairo({
   subsets: ["latin", "arabic"],
-  variable: "--font-cairo",
   display: "swap",
+  variable: "--font-cairo",
+});
+
+const elMessiri = El_Messiri({
+  subsets: ["latin", "arabic"],
+  display: "swap",
+  variable: "--font-el-messiri",
 });
 
 export const metadata = {
   title: "UzerSaif | Tour",
   description: "Tour",
+};
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
 };
 
 export function generateStaticParams() {
@@ -41,8 +53,32 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} dir={locale === "ar" ? "rtl" : "ltr"}>
+    <html lang={locale} dir={locale === "ar" ? "rtl" : "ltr"} className={`${cairo.variable} ${elMessiri.variable}`}>
       <head>
+        <style>{`
+          /* Cairo for body text */
+          .font-sans, .font-body {
+            font-family: var(--font-cairo), 'Cairo', -apple-system, BlinkMacSystemFont, sans-serif !important;
+          }
+          /* El Messiri for headings */
+          h1, h2, h3, h4, h5, h6, .font-heading {
+            font-family: var(--font-el-messiri), 'El Messiri', Arial, sans-serif !important;
+          }
+          /* Badges - عناصر عندها border و backdrop-blur */
+          span[class*="backdrop-blur"],
+          span[class*="border"],
+          span[class*="rounded-full"][class*="border"],
+          div[class*="backdrop-blur"] > h1,
+          div[class*="backdrop-blur"] > h2,
+          div[class*="backdrop-blur"] > h3,
+          div[class*="backdrop-blur"] > span,
+          div[class*="border"][class*="rounded"] > h1,
+          div[class*="border"][class*="rounded"] > h2,
+          div[class*="border"][class*="rounded"] > h3,
+          div[class*="border"][class*="rounded"] > span {
+            font-family: var(--font-el-messiri), 'El Messiri', Arial, sans-serif !important;
+          }
+        `}</style>
         {/* Meta Pixel Code */}
         <Script
           id="meta-pixel"
@@ -78,8 +114,7 @@ export default async function LocaleLayout({
         />
       </head>
       <body
-        className={`${cairo.variable} antialiased`}
-        style={{ fontFamily: "'Cairo', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" }}
+        className={`${cairo.className} ${cairo.variable} ${elMessiri.variable} antialiased`}
       >
         <noscript>
           <img

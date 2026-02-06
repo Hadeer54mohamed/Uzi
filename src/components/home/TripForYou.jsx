@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
-import { Check } from "lucide-react";
 
 const TripForYou = () => {
   const t = useTranslations("tripForYou");
@@ -23,11 +22,11 @@ const TripForYou = () => {
       <span key={i} className="block">
         {line.split(/\*(.*?)\*/g).map((part, j) =>
           j % 2 === 1 ? (
-            <span key={j} className="text-white font-black text-2xl">
+            <span key={j} className="text-white font-black text-lg md:text-xl">
               {part}
             </span>
           ) : (
-            <span key={j} className="text-white font-bold text-xl">{part}</span>
+            <span key={j} className="text-white font-medium text-lg md:text-xl">{part}</span>
           )
         )}
       </span>
@@ -35,46 +34,49 @@ const TripForYou = () => {
   };
 
   return (
-    <section className="relative py-10  overflow-hidden bg-black text-white">
-      {/* Ambient Glow - Centered */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#F47A1F]/10 blur-[180px] rounded-full pointer-events-none" />
-
-      <div className="relative z-10 container mx-auto px-4">
-        <motion.div 
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="max-w-3xl mx-auto"
-        >
-          <div className="p-6 sm:p-8 rounded-2xl border border-[#F47A1F]/20 bg-gradient-to-br from-[#F47A1F]/5 to-transparent backdrop-blur-sm">
-            <h3 className="text-[clamp(1.5rem,5vw,2.5rem)] font-bold mb-6 flex items-center gap-3 md:text-2xl">
-              <div className="w-10 h-10 rounded-full bg-[#F47A1F]/20 flex items-center justify-center">
-                <Check className="w-8 h-8" />
-              </div>
+    <section className="relative  overflow-hidden bg-black text-white">
+    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[300px] bg-[#F47A1F]/5 blur-[100px] pointer-events-none" />
+  
+    <div className="relative z-10 container mx-auto px-4 md:px-8">
+      <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+        className="max-w-3xl mr-4 ml-auto md:mx-auto  md:text-center" 
+      >
+        
+        <div className="flex justify-center mb-5">
+          <div className="inline-block bg-white/10 backdrop-blur-md border border-[#F47A1F] rounded-full px-10 py-2 shadow-[0_0_20px_rgba(244,122,31,0.2)]">
+            <h3 className="text-xl md:text-3xl font-bold text-[#F47A1F] tracking-wide">
               {t("forYouTitle")}
             </h3>
-            <ul className="space-y-4">
-              {forYouItems.map((item, index) => (
-                <motion.li
-                  key={item}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1, duration: 0.4 }}
-                  className="flex items-start gap-3 text-white/80"
-                >
-                  <span className="mt-1.5 w-2 h-2 rounded-full bg-[#F47A1F] flex-shrink-0" />
-                  <span className="leading-relaxed text-[clamp(1rem,3vw,1.25rem)] md:text-base">
-                    {renderTextWithHighlight(t(`forYou.${item}`))}
-                  </span>
-                </motion.li>
-              ))}
-            </ul>
           </div>
-        </motion.div>
-      </div>
-    </section>
+        </div>
+        <ul className="space-y-6 md:space-y-8">
+  {forYouItems.map((item, index) => (
+    <motion.li
+      key={item}
+       initial={{ opacity: 0, x: -10 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
+      transition={{ delay: index * 0.1 }}
+      className="flex items-start gap-4 text-right md:justify-center md:text-center"
+    >
+      {/* Bullet */}
+      <div className="mt-2 w-3 h-3 rounded-full bg-[#F47A1F] flex-shrink-0" />
+
+      {/* Text */}
+      <div className="text-lg md:text-xl font-medium text-white leading-relaxed">
+  {renderTextWithHighlight(t(`forYou.${item}`))}
+</div>
+
+    </motion.li>
+  ))}
+</ul>
+ </motion.div>
+    </div>
+  </section>
   );
 };
 

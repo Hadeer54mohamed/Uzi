@@ -2,78 +2,84 @@
 
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
-import MediaSwiper from "../MediaSwiper";
-import { AboutBedouin as AboutBedouinMedia } from "@/data/mediaSwiperData";
 
 const AboutBedouin = () => {
   const t = useTranslations("aboutBedouin");
 
   const renderTextWithHighlight = (text) => {
     if (!text) return null;
-    const lines = text.split("\n");
-    return lines.map((line, i) => (
-      <span key={i} className="block">
-        {line.split(/\*(.*?)\*/g).map((part, j) =>
-          j % 2 === 1 ? (
-            <span key={j} className="text-[#F47A1F] font-black text-[1.1em]">
-              {part}
-            </span>
-          ) : (
-            <span key={j} className="font-bold">{part}</span>
-          )
-        )}
-      </span>
-    ));
+    return text.split(/\*(.*?)\*/g).map((part, j) =>
+      j % 2 === 1 ? (
+        <span key={j} className="font-black text-white">
+          {part}
+        </span>
+      ) : (
+        <span key={j}>{part}</span>
+      )
+    );
   };
 
   return (
-    <section className="relative py-12 sm:py-16 bg-black overflow-hidden">
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#F47A1F]/10 blur-[150px] rounded-full pointer-events-none" />
-
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-          
-          <motion.div 
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
+    <section className="relative w-full h-full bg-black overflow-hidden flex">
+      <div className="w-full h-full px-4 py-4 md:py-6 relative z-10 flex">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          className="w-full h-full flex flex-col bg-gradient-to-b from-[#1a1210] to-[#0d0907] border border-[#F47A1F]/30 rounded-3xl p-4 md:p-6 overflow-hidden"
+        >
+          {/* Badge */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="lg:col-span-5 relative group order-2 lg:order-1"
+            transition={{ delay: 0.2, duration: 0.5 }}
+            className="flex justify-center mb-4"
           >
-            <div className="rounded-2xl overflow-hidden border border-[#F47A1F]/20 shadow-xl shadow-[#F47A1F]/10">
-              <MediaSwiper
-                customMedia={AboutBedouinMedia}
-                height="h-[350px] sm:h-[400px] md:h-[500px] lg:h-[550px]"
-                className="grayscale-[20%] group-hover:grayscale-0 transition-all duration-700"
-              />
-            </div>
+            <span className="inline-block text-[#F47A1F] font-bold text-lg md:text-xl px-6 py-2 rounded-full border border-[#F47A1F] bg-fire/10 backdrop-blur-md  tracking-wide">
+              {t("badge")}
+            </span>
           </motion.div>
 
-          <div className="lg:col-span-7 flex flex-col gap-5 text-right order-1 lg:order-2">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className="bg-black/60 backdrop-blur-sm border border-[#F47A1F]/20 rounded-2xl p-5 sm:p-6"
-            >
-              <span className="inline-block text-[#F47A1F] font-black text-[clamp(1.25rem,4vw,1.75rem)] mb-4 px-4 py-2 rounded-full bg-[#F47A1F]/10 border border-[#F47A1F]/30">
-                {t("badge")}
-              </span>
-              
-              <p className="text-white text-[clamp(1.1rem,3.5vw,1.4rem)] leading-relaxed mb-5">
-                {renderTextWithHighlight(t("description"))}
-              </p>
-              
-              <div className="relative pr-5 border-r-4 border-[#F47A1F] rounded-sm bg-[#F47A1F]/5 py-4 px-4">
-                <p className="text-white leading-relaxed text-[clamp(1rem,3vw,1.2rem)]">
-                  {renderTextWithHighlight(t("quote"))}
-                </p>
-              </div>
-            </motion.div>
-          </div>
+          {/* Description */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3, duration: 0.5 }}
+            className="text-white text-base md:text-lg leading-relaxed font-medium mb-4 text-center"
+          >
+            {renderTextWithHighlight(t("description"))}
+          </motion.p>
 
-        </div>
+          {/* Image – flexible height */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.96 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.4, duration: 0.6 }}
+            className="relative flex-1 -mx-4 md:-mx-6 mb-4 overflow-hidden rounded-xl"
+          >
+            <img
+              src="/moucup1.png"
+              alt="Bedouin of Farafra"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0d0907]/90 via-[#0d0907]/40 to-transparent" />
+          </motion.div>
+
+          {/* Quote */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.5, duration: 0.5 }}
+            className="text-white text-sm md:text-base leading-relaxed font-medium text-center"
+          >
+            {renderTextWithHighlight(t("quote"))}
+          </motion.p>
+        </motion.div>
       </div>
     </section>
   );

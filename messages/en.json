@@ -1,22 +1,9 @@
 {
-  "metadata": {
-    "title": "UzerSaif | Tours",
-    "description": "Unique desert tours in the White Desert"
-  },
-  "nav": {
-    "home": "Home",
-    "trips": "Trips",
-    "about": "About Us",
-    "contact": "Contact Us",
-    "bookNow": "Book Now"
-  },
   "hero": {
     "title": "A Journey in the Heart of the White Desert",
     "partBoldStart": "Three days",
     "partNormal": "You'll leave everything behind…",
-    "partBoldEnd": "and explore a new world of calm, beauty, and real adventure",
-    "bookingButton": "Book Your Spot Now",
-    "limitedSpots": "Limited spots available"
+    "partBoldEnd": "and explore a new world of calm, beauty, and real adventure"
   },
   "desertComparison": {
     "titleStart": "The difference between a White Desert trip with companies",
@@ -131,18 +118,10 @@
  "aboutBedouin": {
   "badge": "About the Bedouins of Farafra",
   "description": "*We are the Bedouins of Farafra Oasis, the people and guardians of the White Desert.* We offer an experience that comes straight from the heart of the place itself. *For us, camping is a complete way of life, not just accommodation* — filled with simplicity, comfort, *and real adventure* in a nature we truly love and protect because it’s part of who we are.",
-  "quote": "*Our experience in the White Desert spans more than 26 years* — we know its routes, seasons, and secrets by heart. Every trip we organize is built on real knowledge and authentic experience. *We’ve run the same programs thousands of times* with adventurers from different countries around the world.",
-  "teamTitle": "Our Team at UzerSaif",
-  "teamDescription": "A professional team that truly understands the desert and delivers a genuine, warm experience. We are committed to reserve regulations and deeply care about the environment,",
-  "teamHighlight": "and we always find an immediate solution in any situation.",
-  "promise": "We promise you a different kind of experience...",
-  "promiseHighlight": "Not because we sell trips — but because we share a part of our life with you.",
-  "bookingButton": "Book your spot now",
-  "limitedSpots": "Limited spots available"
-},
+  "quote": "*Our experience in the White Desert spans more than 26 years* — we know its routes, seasons, and secrets by heart. Every trip we organize is built on real knowledge and authentic experience. *We’ve run the same programs thousands of times* with adventurers from different countries around the world."
+  },
   "faq": {
     "title": "Frequently Asked Questions",
-    "subtitle": "Answers to the most common questions our clients ask",
     "questions": {
       "firstTime": {
         "question": "Is the trip suitable for me even if it's my first time in the desert?",
@@ -167,26 +146,8 @@
     }
   },
   "footer": {
-    "description": "We offer you the best travel and unique tour experiences. Enjoy unforgettable trips in the most beautiful natural areas.",
-    "bookNow": "Book Your Spot Now",
-    "contactUs": "Contact Us",
-    "quickLinks": "Quick Links",
-    "followUs": "Follow Us",
-    "followUsDesc": "Follow us on social media to know the latest offers and trips",
-    "location": "Cairo, Egypt",
     "copyright": "All Rights Reserved",
     "designedBy": "Designed & Developed by"
-  },
-  "common": {
-    "bookNow": "Book Now",
-    "learnMore": "Learn More",
-    "readMore": "Read More",
-    "close": "Close",
-    "next": "Next",
-    "previous": "Previous",
-    "loading": "Loading...",
-    "error": "An error occurred",
-    "success": "Success"
   },
   "spaceshipIntro": {
     "launching": "Launching...",
@@ -197,16 +158,12 @@
     "skip": "Skip"
   },
   "mediaSwiper": {
-    "image": "Image",
-    "video": "Video",
     "noMedia": "No images or videos in the gallery",
     "loading": "Loading..."
   },
   "beforeBooking": {
     "title": "Before You Book",
     "subtitle": "Important notes to ensure a comfortable experience from the start.",
-    "bookingButton": "Book Your Spot Now",
-    "limitedSpots": "Limited spots available",
     "notes": {
       "network": {
         "title": "Weak Network During Camping",
@@ -232,28 +189,9 @@
   },
   "reviewsVideos": {
     "title": "What Our Clients Said About the Trip",
-    "subtitle": "What do people say about the White Desert trip with UzerSaif?",
-    "clickToClose": "Click anywhere to close",
-    "watchVideo": "Watch Video",
-    "videos": {
-      "QViYDcYGl34": "Watch Video",
-      "-aUqfhZNjPQ": "Watch Video",
-      "hkvlJHJEeHs": "Watch Video",
-      "jIYepfj2xZk": "Watch Video",
-      "qBw1QuRwz_o": "Watch Video",
-      "GzfxsGQc1LA": "Watch Video",
-      "mmtSc1TVgN4": "Watch Video",
-      "kUQyvODbExY": "Watch Video",
-      "yeYdMzvLTXk": "Watch Video",
-      "jdI3GoGe9XI": "White Desert Trip - An Unforgettable Experience",
-      "i4w2WfMh-fw": "Adventure in the Heart of the White Desert",
-      "facebook": "Why are the Mushroom and Chicken symbols of the White Desert?!"
-    },
-    "bookingButton": "Book Your Spot Now",
-    "limitedSpots": "Limited spots available"
+    "subtitle": "What do people say about the White Desert trip with UzerSaif?"
   },
   "tripForYou": {
-    "title": "Is This Trip For You?",
     "forYouTitle": "This trip is for you if...?",
     "forYou": {
       "psychological": "If you want a *different trip* in the strangest reserves in Egypt",
@@ -262,38 +200,19 @@
       "leavePhone": "If you like *comfortable organization*, especially if it's your first time *camping*",
       "respectPlace": "If you're looking for *the experience more than luxury*",
       "images": "If you love photography and want to *take amazing photos*"
-    },
-    "bedouinBox": {
-      "title": "We are the Bedouins of Farafra Oasis",
-      "line1": "This desert is our home, and we know it well",
-      "line2": "If you feel it's right for you…",
-      "welcome": "We'll welcome you and share a part of our lives with you"
     }
   },
   "priceAction": {
-    "introLine1": "This trip isn't the cheapest",
-    "introLine2": "Because it's not made for everyone",
-    "introLine3": "And doesn't repeat every week",
-    "priceIncludes": "This price includes everything…",
-    "priceIncludesDetail": "From the moment you leave Cairo until you return.",
-    "bookingMethodTitle": "How to Book",
     "afterBooking": {
       "title": "After you book:",
       "contact": "We'll contact you within minutes",
       "details": "We'll send you all the details step by step",
       "cancel": "And if you feel the trip isn't for you… cancellation is easy and guaranteed"
     },
-    "askQuestion": "If you want to ask one question before you decide… that's natural.",
-    "feelingCalm": "And if you feel calm and the White Desert is calling you quietly",
-    "notCoincidence": "Then your presence here is no coincidence.",
-    "mainButton": "Send WhatsApp from here 👈🏻",
-    "limitedSpots": "Limited spots available",
-    "secondaryLink": "Or ask us one question on WhatsApp",
-    "askQuestionMessage": "Hello Uzer Saif, I have a question before booking the trip!",
-    "subscribeNow": "Please send your ID photo and transfer screenshot to book the hotel and obtain security permits"
+    "askQuestionMessage": "Hello Uzer Saif, I have a question before booking the trip!"
   },
   "contactForm": {
-    "sectionTitle": "Book Now",
+    "sectionTitle": "Ready to book your spot with a deposit …..",
     "nationality": "Nationality",
     "selectNationality": "Select Nationality",
     "egyptian": "Egyptian",
@@ -318,8 +237,6 @@
     },
     "notes": "Additional Notes",
     "notesPlaceholder": "Write any notes or questions...",
-    "optional": "optional",
-    "requiredFields": "Required fields",
    "depositQuestion": "Ready to book your spot",
     "depositAmount": "with 25% deposit",
     "afterContact": "after we contact you?",
@@ -342,29 +259,18 @@
     }
   },
   "desertTrip": {
-    "exploreTitle": "Explore",
-    "exploreHighlight": "Our Adventures",
     "gatheringPoints": "Meeting Point",
     "gatheringLocation": "Go Bus booking office – Abdel Moneim Riad",
-    "gatheringTime": "Thursday 10:30 PM",
-    "tripProgram": "Trip Program",
-    "remainingSeats": "Remaining Seats:",
-    "of": "of",
-    "bookNow": "Book Your Spot Now",
-    "bookingConfirm": "Booking confirmed upon deposit payment",
-    "availableNow": "Booking available now - Instant reply",
+    "gatheringTime1": "11 PM",
+    "gatheringTime2": "11:30 PM",
+    "Location": "Location",
     "discount": "Discount",
     "useCode": "Use code",
     "priceAfterDiscount": "Trip price after discount",
-    "currency": "EGP",
+    "currency": "pound",
     "foreignerPrice": "$210",
     "foreignerPriceLabel": "Price for Non-Egyptians",
     "insteadOf": "Instead of",
-    "bookingMethod": "Booking & Payment Method",
-    "deposit": "Deposit",
-    "payment": "Payment",
-    "number": "Number",
-    "account": "Account",
     "guaranteeTitle": "Farafra Oasis Bedouin Guarantee",
     "guaranteeNote": "Camping with us isn't a hotel… but we're Bedouins, and our word is our honor.",
     "importantNote": "Please send your ID or passport photo",
@@ -379,7 +285,6 @@
       "*Program is flexible* and may change due to *weather or security conditions* while ensuring a *safe and comfortable experience*",
       "What you need is simple: *your clothes*, *personal belongings*, and following trip instructions"
     ],
-    "subscribeNow": "I want to subscribe now",
     "loading": "Loading...",
     "whatsappMessage": "Hello Uzer Saif, I'd like to book my spot in \"{title}\". Can you share the details?",
     "bookingButton": "Book Your Spot Now",
@@ -389,19 +294,14 @@
         "title": "White Desert Trip Program",
         "location": "Farafra Oasis, New Valley",
         "duration": "3 Days / 2 Nights",
-        "discountAmount": "3300 EGP",
-        "gathering": [
-          "First gathering: 10:30 PM – Go Bus booking office – Abdel Moneim Riad",
-          "Departure: 11:00 PM with a rest stop on the way",
-          "Second gathering: 11:40 PM – Shell Out gas station (end of Hadayek Al-Ahram wall – Menkaure Gate, Third Gate of Hadayek Al-Ahram)"
-        ],
+        "discountAmount": "3300 pound",
         "itinerary": {
           "day1": {
             "title": "Day One – Friday",
             "activities": [
               "05:30 AM: Visit El-Gara Cave (the strangest cave in Egypt)",
               "09:00 AM: Arrival at Uzersaif Camp in Farafra Oasis + Egyptian breakfast (camp equipped with bathroom and electricity)",
-              "10:00 AM: Start moving *with 4x4 safari vehicles and visiting:*|Valley of Obstacles|Moon Cave|Sandboarding|Hanes Valley|2:00 PM: Ain Khadra (light lunch)|Ice House – Moon Surface|Camps Valley|Famous formations: Mushroom – Chicken – Rabbit – Horse – Camel – Sphinx",
+              "10:00 AM: Start moving *with 4x4 safari vehicles and visiting:*\n◦ Valley of Obstacles\n◦ Moon Cave\n◦ Sandboarding\n◦ Hanes Valley\n◦ 2:00 PM: Ain Khadra (light lunch)\n◦ Ice House – Moon Surface\n◦ Camps Valley\n◦ Famous formations: Mushroom – Chicken – Rabbit – Horse – Camel – Sphinx",
               "5:00 PM: At sunset: Setting up camp – receiving tents and sleeping equipment",
               "9:00 PM: BBQ dinner with Bedouin marinade + stargazing night with fire and Zarda tea"
             ]
@@ -413,9 +313,7 @@
               "8:00 AM: Breaking camp and returning to Farafra Oasis",
               "10:30 AM: Check into Bedouin hotel – 3 hours rest",
               "2:00 PM: Head to UzerSaif Camp (light lunch)",
-              "Farafra Palace and Amina House",
-              "Oasis gardens and Roman springs",
-              "Badr Abdel Moghny Museum (world heritage)",
+              "*Places to visit today:* \n◦ Farafra Palace and Amina House \n◦ Oasis gardens and Roman springs \n◦ Badr Abdel Moghny Museum (world heritage)",
               "9:00 PM: Bedouin Mizmar party + Mandi dinner"
             ]
           },

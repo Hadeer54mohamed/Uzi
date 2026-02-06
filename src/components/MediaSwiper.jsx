@@ -335,34 +335,57 @@ const MediaItem = ({ item, isActive, isMuted, toggleMute, objectFit = "contain",
     }
   };
 
+  const desktopSrc = getImageUrl(item.image);
+  const mobileSrc = getImageUrl(item.imageMobile || item.image);
+
+  const imgClass = objectFit === "cover" ? "w-full h-full object-cover" : "max-w-full max-h-full object-contain";
+
   return (
     <div className="relative w-full h-full overflow-hidden bg-black flex items-center justify-center">
-      
-      {/* Blurred Background */}
+      {/* Blurred Background  */}
       <motion.img
-        src={getImageUrl(item.image)}
+        src={mobileSrc}
         aria-hidden
-        className="absolute inset-0 w-full h-full object-cover scale-105 blur-xl opacity-40"
+        className="absolute inset-0 w-full h-full object-cover scale-105 blur-xl opacity-40 md:hidden"
+        animate={{ scale: [1.1, 1.15, 1.1] }}
+        transition={{ duration: 12, repeat: Infinity }}
+      />
+      <motion.img
+        src={desktopSrc}
+        aria-hidden
+        className="absolute inset-0 w-full h-full object-cover scale-105 blur-xl opacity-40 hidden md:block"
         animate={{ scale: [1.1, 1.15, 1.1] }}
         transition={{ duration: 12, repeat: Infinity }}
       />
 
-      {/* Main Image */}
+      {/* Main Image  */}
       <motion.img
         ref={imgRef}
         initial={{ opacity: 0.8 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.3, ease: "easeOut" }}
-        src={getImageUrl(item.image)}
+        src={mobileSrc}
         alt={item.alt || "Gallery image"}
-        className="relative z-10 max-w-full max-h-full object-contain"
+        className={`relative z-10 md:hidden ${imgClass}`}
         onLoad={handleLoad}
         onError={(e) => {
-          e.target.src = "/hotel1.jpg";
+          e.target.src = desktopSrc;
           handleLoad();
         }}
       />
-
+      {/* Main Image  */}
+      <motion.img
+        initial={{ opacity: 0.8 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.3, ease: "easeOut" }}
+        src={desktopSrc}
+        alt={item.alt || "Gallery image"}
+        className={`relative z-10 hidden md:block ${imgClass}`}
+        onLoad={handleLoad}
+        onError={(e) => {
+          e.target.src = mobileSrc;
+        }}
+      />
     </div>
   );
 };
@@ -548,7 +571,7 @@ const MediaSwiper = ({
             isActive={true}
             isMuted={isMuted}
             toggleMute={() => setIsMuted(!isMuted)}
-            objectFit={objectFit}
+            objectFit={isMobile ? "contain" : objectFit}
             onLoadComplete={handleMediaLoaded}
             isMobile={isMobile}
           />
