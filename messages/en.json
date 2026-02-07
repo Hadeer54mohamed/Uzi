@@ -5,117 +5,7 @@
     "partNormal": "You'll leave everything behind…",
     "partBoldEnd": "and explore a new world of calm, beauty, and real adventure"
   },
-  "desertComparison": {
-    "titleStart": "The difference between a White Desert trip with companies",
-    "titleHighlight": "and with Farafra Oasis Bedouins",
-
-    "othersTitle": "With Companies",
-    "other1": "Compressed schedule without meaning",
-    "other2": "Focus on photos",
-    "other3": "Superficial organization",
-    "other4": "An experience that ends and you return the same",
-
-    "ourTitle": "With Farafra Oasis Bedouins",
-    "our1": "Calm and organized rhythm",
-    "our2": "Live with the locals and learn their stories",
-    "our3": "The White Desert is a completely different experience and feeling… not just an Activity",
-    "our4": "An experience that truly leaves a mark inside you",
-    "bookingButton": "Book Your Spot Now",
-    "limitedSpots": "Limited spots available"
-  },
-  "desertFeeling": {
-    "title": "The feeling you'll experience",
-
-    "safe": "Complete safety and calm… without feeling isolated",
-    "fire": "Bedouin fire",
-    "stars": "A sky full of stars",
-    "noNotifications": "No notifications",
-    "noRush": "No rush",
-
-    "footerHighlightStart": "The White Desert is not just a view…",
-    "footerText": "it's an empty space that lets you",
-    "footerHighlightEnd": "hear yourself."
-  },
- "experiences": {
-  "title": "What will you take away from the trip?",
-  "subtitleStart": "Things you won’t find on any other trip…",
-  "subtitle": "Because this experience is designed in every detail just for you",
-  "items": {
-    "spaceFeeling": {
-      "title": "The Real Feeling of Space",
-      "desc": "A place that truly feels like another planet—not decoration, acting, or tourist trickery",
-      "desc2": "✔ Real space experience… on Earth"
-    },
-    "uniquePhotos": {
-      "title": "Photos Unlike Any Other",
-      "desc": "White formations, empty spaces, and endless skies",
-      "desc2": "✔ Natural. Raw. Unfiltered."
-    },
-    "adventure": {
-      "title": "A Thoughtful Adventure",
-      "desc": "Prepared camp – planned camping – Bedouin-style hotel",
-      "desc2": "✔ Adventure feeling without stress or hassle"
-    },
-    "realDisconnect": {
-      "title": "Truly Disconnect from the World",
-      "desc": "Silence, stars, fire, and pure calm",
-      "desc2": "✔ Limited spots to keep the experience Clean & Meaningful."
-    },
-    "deeperReturn": {
-      "title": "Return with More Than Photos",
-      "desc": "Calm, rest, mental reset",
-      "desc2": "✔ Not just memories on your phone"
-    },
-    "noWorries": {
-      "title": "No Need to Worry About Details",
-      "desc": "Sleep, food, transport, preparation",
-      "desc2": "✔ Everything is included in the price"
-    },
-    "notForEveryone": {
-      "title": "An Experience Not Made for Everyone",
-      "desc": "",
-      "desc2": "✔ Choose it because you understand its value"
-    },
-    "rightDecision": {
-      "title": "Feel That You Made the Right Choice from the Start",
-      "desc": "",
-      "desc2": "✔ Peace of mind from the very beginning"
-    },
-    "bedouinGuide": {
-      "title": "Local Bedouin Guide",
-      "desc": "",
-      "desc2": "✔ With you throughout the trip"
-    }
-  },
-  "bookingButton": "Book Your Spot Now",
-  "limitedSpots": "Limited spots available"
-},
-
-  "whyChooseUs": {
-    "title": "Why is this trip different from any other place in Egypt?",
-    
-   "features": {
-  "soulChanging": {
-    "description": "The White Desert is not just *a sign of God's wonders*\nThis is a meaningful experience… its calm and beauty change something deep inside you"
-  },
-  "smartComfort": {
-    "description": "*Smart and comfortable arrangements to keep you always at ease*\n(3-star hotel – planned camping – fully equipped camp)"
-  },
-  "uniqueMemories": {
-    "description": "You'll take photos as if *from another world*\nNot just because we take you to a beautiful place, but because our team knows how to capture the perfect shot for the setting"
-  },
-  "bedouinSafety": {
-    "description": "*With the Bedouins, you are safe*\nWe take care of your comfort… and you take care of the place"
-  },
-  "disconnect": {
-    "description": "*Live surrounded by calm, stars, and fire*\nAnd disconnect completely from the city's noise"
-  }
-},
-    "ctaButton": "Want to make sure this trip is right for you?",
-    "bookingButton": "Book Your Spot Now",
-    "limitedSpots": "Limited spots available"
-  },
- "aboutBedouin": {
+  "aboutBedouin": {
   "badge": "About the Bedouins of Farafra",
   "description": "*We are the Bedouins of Farafra Oasis, the people and guardians of the White Desert.* We offer an experience that comes straight from the heart of the place itself. *For us, camping is a complete way of life, not just accommodation* — filled with simplicity, comfort, *and real adventure* in a nature we truly love and protect because it’s part of who we are.",
   "quote": "*Our experience in the White Desert spans more than 26 years* — we know its routes, seasons, and secrets by heart. Every trip we organize is built on real knowledge and authentic experience. *We’ve run the same programs thousands of times* with adventurers from different countries around the world."
@@ -149,43 +39,10 @@
     "copyright": "All Rights Reserved",
     "designedBy": "Designed & Developed by"
   },
-  "spaceshipIntro": {
-    "launching": "Launching...",
-    "crossingSpace": "Crossing space...",
-    "hyperSpeed": "Hyper Speed Journey 🚀",
-    "landingTitle": "Landing on the White Desert",
-    "welcomeText": "Welcome to planet",
-    "skip": "Skip"
-  },
+ 
   "mediaSwiper": {
     "noMedia": "No images or videos in the gallery",
     "loading": "Loading..."
-  },
-  "beforeBooking": {
-    "title": "Before You Book",
-    "subtitle": "Important notes to ensure a comfortable experience from the start.",
-    "notes": {
-      "network": {
-        "title": "Weak Network During Camping",
-        "desc": "This is intentional to help you disconnect and experience true peace.",
-        "desc2": "✔ Network is relatively better at camp and hotel"
-      },
-      "weather": {
-        "title": "Mild Days, Cold Nights",
-        "desc": "Equipment is prepared for the cold, with clear guidelines before the trip so you come ready and confident.",
-        "desc2": "✔ With blankets at camp to ensure your comfort"
-      },
-      "requirements": {
-        "title": "What You Need is Simple",
-        "desc": "Your clothes, personal items, and following trip instructions.",
-        "desc2": "✔ We handle all other details and equipment"
-      },
-      "flexibility": {
-        "title": "Flexible Program for Safety",
-        "desc": "The order of some activities may change due to weather or security conditions, to ensure a safe and comfortable experience.",
-        "desc2": "✔ All adjustments are for your comfort and safety without losing the spirit or value of the experience"
-      }
-    }
   },
   "reviewsVideos": {
     "title": "What Our Clients Said About the Trip",

@@ -1,17 +1,14 @@
 "use client";
 
-import { useState } from "react";
 import Hero from "@/components/home/Hero";
 import FAQ from "@/components/home/FAQ";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { SectionDivider } from "@/components/ui/SectionDivider";
-import SpaceshipIntro from "@/components/SpaceshipIntro";
-import { motion } from "framer-motion";
 import AboutBedouin from "@/components/home/AboutBedouin";
 import DesertTrip from "@/components/home/DesertTrip";
 import MediaSwiper from "@/components/MediaSwiper";
-import { hotelGallery, DesertComparison as DesertComparisonMedia } from "@/data/mediaSwiperData";
+import { hotelGallery } from "@/data/mediaSwiperData";
 import ReviewsVideos from "@/components/home/ReviewsVideos";
 import TripForYou from "@/components/home/TripForYou";
 import PriceAction from "@/components/home/PriceAction";
@@ -20,22 +17,13 @@ import TripInstructions from "@/components/home/TripInstructions";
 import Image from "next/image";
 
 const Home = () => {
-  const [showIntro, setShowIntro] = useState(true);
 
   return (
     <>
-      {showIntro && <SpaceshipIntro onComplete={() => setShowIntro(false)} />}
 
       <div className="min-h-screen relative z-10 w-full overflow-x-hidden">
         <Navbar transparent />
-
-        <motion.div
-          initial={{ opacity: 0, scale: 0.98 }}
-          animate={{ opacity: showIntro ? 0 : 1, scale: 1 }}
-          transition={{ duration: 1.2, ease: "easeOut" }}
-        >
-          <Hero />
-        </motion.div>
+        <Hero />
         {/*   <PhotoGrid /> */}
         <div className="bg-black">
 

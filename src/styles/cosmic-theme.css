@@ -492,33 +492,6 @@
   background-color: var(--desert-fire);
 }
 
-/* ====================== Skip Intro Button ====================== */
-
-.btn-skip-intro {
-  position: absolute;
-  top: 1.5rem;
-  right: 1.5rem;
-  z-index: 50;
-  padding: 0.5rem 1.25rem;
-  font-size: 0.875rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  color: rgba(255, 255, 255, 0.7);
-  background: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(244, 122, 31, 0.3);
-  border-radius: 9999px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.btn-skip-intro:hover {
-  color: #fff;
-  background: rgba(244, 122, 31, 0.2);
-  border-color: var(--desert-fire);
-  box-shadow: 0 0 20px rgba(244, 122, 31, 0.3);
-  transform: scale(1.05);
-}
 
 /* ============================================ */
 p{
@@ -535,12 +508,7 @@ p{
     transform: none;
   }
   
-  .btn-skip-intro {
-    top: 1rem;
-    right: 1rem;
-    padding: 0.4rem 1rem;
-    font-size: 0.75rem;
-  }
+
 }
 .input {
   width: 100%;
