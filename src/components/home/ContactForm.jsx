@@ -383,7 +383,7 @@ export default function ContactForm() {
                 />
               </div>
 
-              <div className={`bg-[rgba(244,122,31,0.1)] rounded-xl p-4 border ${fieldErrors.depositReady ? 'border-red-500' : 'border-[rgba(244,122,31,0.2)]'}`}>
+             {/*  <div className={`bg-[rgba(244,122,31,0.1)] rounded-xl p-4 border ${fieldErrors.depositReady ? 'border-red-500' : 'border-[rgba(244,122,31,0.2)]'}`}>
                 <label className="block text-white mb-3 font-medium">
                   {t("depositQuestion")} <span className="text-[#F47A1F]">{t("depositAmount")}</span> {t("afterContact")}
                 </label>
@@ -409,7 +409,7 @@ export default function ContactForm() {
                   </label>
                 </div>
                 {fieldErrors.depositReady && <p className="text-red-500 text-sm mt-1">{fieldErrors.depositReady}</p>}
-              </div>
+              </div> */}
 
               <motion.button
   type="submit"

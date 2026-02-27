@@ -8,11 +8,8 @@ const TripForYou = () => {
 
   const forYouItems = [
     "psychological",
-    "travelOften",
     "quietPlace",
     "leavePhone",
-    "respectPlace",
-    "images",
   ];
 
   const renderTextWithHighlight = (text) => {

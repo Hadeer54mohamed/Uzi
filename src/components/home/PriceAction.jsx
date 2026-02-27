@@ -74,43 +74,45 @@ const PriceAction = () => {
   <div className="absolute -top-10 -left-10 w-32 h-32 bg-white/20 blur-[60px]" />
   <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-white/20 blur-[60px]" />
 
-  <div className="relative z-10 text-center space-y-5">
-    {/* Discount Badge */}
-    <div className="inline-block mx-auto px-6 py-2 border border-white/30 rounded-full text-2xl font-black bg-gradient-to-r from-[#FDAE53] to-[#F47A1F] text-white">
-      {tTrip("discount")} {tTrip(`trips.${tripKey}.discountAmount`)}
-    </div>
-
-    {/* Coupon Code */}
-    <p className="text-white font-black text-lg">
-      {tTrip("useCode")} <span className="underline">{trip.discountCode}</span>
-    </p>
-
-    {/* Small Note */}
-    <p className="text-lg font-bold text-white">
-      {tTrip("priceAfterDiscount")}
-    </p>
-
-    {/* Price */}
-    <div className="text-5xl md:text-6xl font-black text-white">
-      {trip.price}
-      <span className="text-xl font-bold text-white/80 mr-2">{tTrip("currency")}</span>
-    </div>
-
-    {/* Old Price */}
-    <div className="text-xl font-black text-white line-through">
-      {tTrip("insteadOf")} {trip.originalPrice} {tTrip("currency")}
-    </div>
-
-    {/* Foreigner Price */}
-    <div className="pt-4 mt-4 border-t border-white/20">
-      <p className="text-white font-bold text-xl mb-2">{tTrip("foreignerPriceLabel")}</p>
-      <div className="text-4xl md:text-5xl font-black text-white">
-        {tTrip("foreignerPrice")}
-      </div>
-    </div>
-
-  
+  <div className="relative z-10 text-center space-y-6">
+  {/* Discount Badge */}
+  <div className=" mx-auto px-10 py-4 border-4 border-white/40 rounded-full text-3xl md:text-4xl font-black bg-gradient-to-r from-[#FDAE53] to-[#F47A1F] text-white shadow-xl">
+    {tTrip("discount")} {tTrip(`trips.${tripKey}.discountAmount`)}
   </div>
+
+  {/* Coupon Code */}
+  <p className="text-white font-black text-xl">
+    {tTrip("useCode")} <span className="underline">{trip.discountCode}</span>
+  </p>
+
+  {/* Small Note */}
+  <p className="text-xl font-bold text-white">
+    {tTrip("priceAfterDiscount")}
+  </p>
+
+  {/* Price */}
+  <div className="text-6xl md:text-7xl font-black text-white">
+    {trip.price}
+    <span className="text-2xl font-bold text-white/80 mr-2">
+      {tTrip("currency")}
+    </span>
+  </div>
+
+  {/* Old Price */}
+  <div className="text-2xl font-black text-white line-through">
+    {tTrip("insteadOf")} {trip.originalPrice} {tTrip("currency")}
+  </div>
+
+  {/* Foreigner Price */}
+  <div className="pt-6 mt-6 border-t border-white/20">
+    <p className="text-white font-bold text-2xl mb-3">
+      {tTrip("foreignerPriceLabel")}
+    </p>
+    <div className="text-5xl md:text-6xl font-black text-white">
+      {tTrip("foreignerPrice")}
+    </div>
+  </div>
+</div>
 </motion.div>
   </div>
       </div>

@@ -38,6 +38,10 @@ const FAQ = () => {
       questionKey: "bathroom",
       image: "/wc.jpg",
     },
+    {
+      id: "faq-6",
+      questionKey:"instructions"
+    }
   ];
   const [openItem, setOpenItem] = useState(null);
   const [stars, setStars] = useState([]);

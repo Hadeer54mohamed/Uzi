@@ -13,7 +13,6 @@ import ReviewsVideos from "@/components/home/ReviewsVideos";
 import TripForYou from "@/components/home/TripForYou";
 import PriceAction from "@/components/home/PriceAction";
 import ContactForm from "@/components/home/ContactForm";
-import TripInstructions from "@/components/home/TripInstructions";
 import Image from "next/image";
 
 const Home = () => {
@@ -24,7 +23,6 @@ const Home = () => {
       <div className="min-h-screen relative z-10 w-full overflow-x-hidden">
         <Navbar transparent />
         <Hero />
-        {/*   <PhotoGrid /> */}
         <div className="bg-black">
 
           <div className="md:hidden">
@@ -114,7 +112,7 @@ const Home = () => {
           ]} />
 
         <FAQ />
-        <TripInstructions />
+        
         <Footer />
       </div>
     </>

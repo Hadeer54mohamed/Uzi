@@ -10,31 +10,35 @@
   "description": "*We are the Bedouins of Farafra Oasis, the people and guardians of the White Desert.* We offer an experience that comes straight from the heart of the place itself. *For us, camping is a complete way of life, not just accommodation* — filled with simplicity, comfort, *and real adventure* in a nature we truly love and protect because it’s part of who we are.",
   "quote": "*Our experience in the White Desert spans more than 26 years* — we know its routes, seasons, and secrets by heart. Every trip we organize is built on real knowledge and authentic experience. *We’ve run the same programs thousands of times* with adventurers from different countries around the world."
   },
-  "faq": {
-    "title": "Frequently Asked Questions",
-    "questions": {
-      "firstTime": {
-        "question": "Is the trip suitable for me even if it's my first time in the desert?",
-        "answer": "Yes. The trip is designed for beginners going to the desert for the first time or for adventurers who have tried before. The program is gradual and equipped to let you enjoy while feeling secure, without prior experience."
-      },
-      "comfortable": {
-        "question": "Are the sleeping arrangements and equipment really comfortable?",
-        "answer": "Yes. We use the best types of tents, mattresses, sleeping bags, and blankets suitable for the desert cold, keeping you warm and comfortable in the middle of the desert. With the Farafra Oasis Bedouin guarantee for immediate solutions if you need anything, the goal is for you to have the best White Desert experience while being comfortable."
-      },
-      "bathroom": {
-        "question": "Is there a bathroom? Or will it be difficult?",
-        "answer": "At the Farafra camp, there's a bathroom and electricity. And in camping, there are appropriate facilities for the desert that maintain your comfort and respect for the place, not a random experience or embarrassment."
-      },
-      "food": {
-        "question": "What about the food?",
-        "answer": "Food is an essential part of the experience, not an addition. 7 complete meals, fresh and Organic food, enough and on time, with Zarda tea and hot drinks all day."
-      },
-      "hiddenCosts": {
-        "question": "Are there any other costs besides what's written?",
-        "answer": "No. Everything is included in the price: transportation, safari, camping, hotel, food, activities, and reserve fees. All included, no hidden extra costs. The only thing you'll account for is personal expenses only or gifts."
+
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "questions": {
+        "firstTime": {
+          "question": "Is the trip suitable for me even if it's my first desert experience?",
+          "answer": "Yes. The trip is designed for beginners who are going to the desert for the first time, or for experienced adventurers. The program is gradual and prepared to make you enjoy it safely, with no prior experience required."
+        },
+        "comfortable": {
+          "question": "Are the sleeping arrangements and facilities really comfortable?",
+          "answer": "Yes. We use high-quality tents, mattresses, sleeping bags, and blankets suitable for the desert's temperature, keeping you warm and comfortable. The Bedouins at Farafra Oasis provide immediate support if needed, so you can fully enjoy the White Desert experience."
+        },
+        "bathroom": {
+          "question": "Are there bathrooms, or will it be difficult?",
+          "answer": "Farafra Camp has bathrooms and electricity. The desert camping setup ensures comfort and respects the environment, without being random or inconvenient."
+        },
+        "food": {
+          "question": "What about the food?",
+          "answer": "Food is an essential part of the experience, not an addition. 7 full meals, fresh and organic food, served on time, with herbal tea and hot drinks available throughout the day."
+        },
+        "hiddenCosts": {
+          "question": "Are there any extra costs besides what's listed?",
+          "answer": "No. Everything is included in the price: transportation, safari, camping, hotel, meals, activities, and reserve fees. There are no hidden charges. The only expenses to consider are personal purchases or gifts."
+        },
+        "instructions": {
+          "question": "Instructions",
+"answer": "• Pack light, bring essentials and personal items only\n• Morning is warm, afternoon pleasant, and nights can be cold\n• Wear comfortable clothes for movement and sand; don't forget your sunglasses and cap\n• Shoes are more important than anything; flip-flops, Crocs, or sandals are fine\n• Don't forget a flashlight or use your phone's flash and a power bank\n• Also bring sunscreen and moisturizer\n• If you love coffee, bring the coffee you like"        }
       }
-    }
-  },
+    },
   "footer": {
     "copyright": "All Rights Reserved",
     "designedBy": "Designed & Developed by"
@@ -51,12 +55,9 @@
   "tripForYou": {
     "forYouTitle": "This trip is for you if...?",
     "forYou": {
-      "psychological": "If you want a *different trip* in the strangest reserves in Egypt",
-      "travelOften": "If *safety* is your priority and you like to see places *through the eyes of locals (Bedouins)*",
-      "quietPlace": "If you like to live the moment among *stars, fire, sky, and silence*",
-      "leavePhone": "If you like *comfortable organization*, especially if it's your first time *camping*",
-      "respectPlace": "If you're looking for *the experience more than luxury*",
-      "images": "If you love photography and want to *take amazing photos*"
+      "psychological": "If you want a *different trip* in the strangest reserves in Egypt ...",
+      "quietPlace": "If you like to live the moment among *stars, fire, sky, and silence* ...",
+      "leavePhone": "If you like *comfortable organization*, especially if it's your first time *camping* ..."
     }
   },
   "priceAction": {
@@ -69,7 +70,7 @@
     "askQuestionMessage": "Hello Uzer Saif, I have a question before booking the trip!"
   },
   "contactForm": {
-    "sectionTitle": "Ready to book your spot with a deposit …..",
+    "sectionTitle": "Send The Details",
     "nationality": "Nationality",
     "selectNationality": "Select Nationality",
     "egyptian": "Egyptian",
@@ -117,10 +118,12 @@
   },
   "desertTrip": {
     "gatheringPoints": "Meeting Point",
-    "gatheringLocation": "Go Bus booking office – Abdel Moneim Riad",
-    "gatheringTime1": "11 PM",
+"gatheringLocation1": "Go Bus – Abdel Moneim Riad",
+"gatheringLocation2": "Shell Out Gas Station (End of Giza Gardens Wall – Fayoum Road)",    "gatheringTime1": "10 PM",
     "gatheringTime2": "11:30 PM",
     "Location": "Location",
+   "locationUrl1": "https://goo.gl/maps/fBXRDRwDnxgxwYXs7",
+    "locationUrl2": "https://maps.app.goo.gl/w9tiBRVoLc2Hdsgr5?g_st=ic",
     "discount": "Discount",
     "useCode": "Use code",
     "priceAfterDiscount": "Trip price after discount",
@@ -158,7 +161,9 @@
             "activities": [
               "05:30 AM: Visit El-Gara Cave (the strangest cave in Egypt)",
               "09:00 AM: Arrival at Uzersaif Camp in Farafra Oasis + Egyptian breakfast (camp equipped with bathroom and electricity)",
-              "10:00 AM: Start moving *with 4x4 safari vehicles and visiting:*\n◦ Valley of Obstacles\n◦ Moon Cave\n◦ Sandboarding\n◦ Hanes Valley\n◦ 2:00 PM: Ain Khadra (light lunch)\n◦ Ice House – Moon Surface\n◦ Camps Valley\n◦ Famous formations: Mushroom – Chicken – Rabbit – Horse – Camel – Sphinx",
+              "10:00 AM: Departure *with 4x4 Safari and visits:*\n\n◦ Wadi Al-Aqabah\n◦ Moon Cave\n◦ Sandboarding\n◦ Wadi Hens\n◦ Ice House – Moon Surface\n◦ Wadi Al-Mukhayamat",
+              "Famous formations:\nMushroom – Chicken – Rabbit – Horse – Camel – Sphinx",
+              "2:00 PM: Light lunch at Ain Khadra",
               "5:00 PM: At sunset: Setting up camp – receiving tents and sleeping equipment",
               "9:00 PM: BBQ dinner with Bedouin marinade + stargazing night with fire and Zarda tea"
             ]
@@ -170,7 +175,7 @@
               "8:00 AM: Breaking camp and returning to Farafra Oasis",
               "10:30 AM: Check into Bedouin hotel – 3 hours rest",
               "2:00 PM: Head to UzerSaif Camp (light lunch)",
-              "*Places to visit today:* \n◦ Farafra Palace and Amina House \n◦ Oasis gardens and Roman springs \n◦ Badr Abdel Moghny Museum (world heritage)",
+              "*Places to visit today:* \n\n◦ Farafra Palace and Amina House \n◦ Oasis gardens and Roman springs \n◦ Badr Abdel Moghny Museum (world heritage)",
               "9:00 PM: Bedouin Mizmar party + Mandi dinner"
             ]
           },
@@ -182,7 +187,7 @@
               "11:45 AM: Tea session by the Roman springs",
               "12:45 PM: Visit Black Desert volcanoes",
               "3:00 PM: Stop to buy oasis products",
-              "Arrival in Cairo: 10:00 PM"
+              "10:00 PM: Arrival in Cairo"
             ]
           }
         },

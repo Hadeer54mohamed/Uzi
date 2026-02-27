@@ -42,13 +42,13 @@ const Navbar = ({ transparent = false }) => {
             href="/"
             className="flex items-center justify-center gap-2 hover:scale-[1.05] transition-all duration-300"
           >
-            <Image
-              src="/TOURS.png"
-              alt="Uzer Saif Tours Logo"
-              width={120} 
-              height={120}
-              className="drop-shadow-md object-contain w-24 h-24 md:w-32 md:h-32"
-            />
+            <Image 
+  src="/TOURS.png"
+  alt="Uzer Saif Tours Logo"
+  width={78} 
+  height={78}
+  className="drop-shadow-md object-contain w-[78px] h-[78px] md:w-[78px] md:h-[78px]"
+/>
           </NavLink>
         </div>
 

@@ -24,8 +24,8 @@ const DesertTrip = () => {
         if (isTime) {
           return (
             <span key={`time-${i}`} className="font-heading text-[#F47A1F] font-bold">
-              ({part.replace(/:$/, '')})
-            </span>
+            {part.replace(/:$/, '')}:
+          </span>
           );
         }
         return part;
@@ -38,8 +38,8 @@ const DesertTrip = () => {
       return str.split('◦').map((part, i) => {
         if (i === 0) return processTime(part);
         return (
-          <span key={`bullet-${i}`} className="block mr-4 mt-1">
-            <span className="text-[#F47A1F] font-bold">◦ </span>
+          <span key={`bullet-${i}`} className="inline-block align-top">
+            <span className="text-[#F47A1F] font-bold mr-1">◦</span>
             {processTime(part.trim())}
           </span>
         );
@@ -49,11 +49,37 @@ const DesertTrip = () => {
     const processNewlines = (str) => {
       if (!str.includes('\n')) return processBullets(str);
 
-      return str.split('\n').map((line, i) => (
-        <span key={`line-${i}`} className={i > 0 ? "block mt-1" : ""}>
-          {processBullets(line)}
-        </span>
-      ));
+      const lines = str.split('\n');
+
+      const bulletLineIndexes = lines
+        .map((line, idx) => (line.trim().startsWith('◦') ? idx : null))
+        .filter((idx) => idx !== null);
+
+      const bulletCount = bulletLineIndexes.length;
+      const isOddBullets = bulletCount % 2 === 1;
+      const lastBulletIndex = isOddBullets
+        ? bulletLineIndexes[bulletCount - 1]
+        : null;
+
+      return lines.map((line, i) => {
+        const isBulletLine = bulletLineIndexes.includes(i);
+
+        let className = "";
+        if (isBulletLine) {
+          const isLastOddBullet = isOddBullets && i === lastBulletIndex;
+          className = isLastOddBullet
+            ? "inline-block w-full mt-1 align-top"
+            : "inline-block w-1/2 mt-1 align-top";
+        } else if (i > 0) {
+          className = "block mt-1";
+        }
+
+        return (
+          <span key={`line-${i}`} className={className}>
+            {processBullets(line)}
+          </span>
+        );
+      });
     };
 
     if (!text.includes("*")) {
@@ -259,28 +285,44 @@ const DesertTrip = () => {
                 </div>
 
                 <div className="space-y-5 max-w-4xl mx-auto">
-                  {[1, 2].map((_, index) => (
+                  {[
+                    { label: t("gatheringLocation1"), time: t("gatheringTime1"), url: t("locationUrl1") },
+                    { label: t("gatheringLocation2"), time: t("gatheringTime2"), url: t("locationUrl2") },
+                  ].map((item, index) => {
+                    const hasLocationUrl =
+                      typeof item.url === "string" &&
+                      /^https?:\/\//.test(item.url);
+
+                    return (
                     <div key={index} className="flex flex-wrap items-center justify-between gap-4 border-b border-white/10 pb-5 last:border-0 last:pb-0">
                       <div className="flex items-center gap-3">
                         <MapPin className="text-[#F47A1F] w-6 h-6 shrink-0" />
                         <span className="text-white font-medium text-base md:text-lg">
-                          {t("gatheringLocation")}
+                          {item.label}
                         </span>
                       </div>
                       <div className="flex items-center justify-between flex-1">
                         <div className="flex items-center gap-2">
                           <Clock className="text-[#F47A1F] w-5 h-5" />
                           <span className="text-white font-medium text-base md:text-lg">
-                            {index === 0 ? t("gatheringTime1") : t("gatheringTime2")}
+                            {item.time}
                           </span>
                         </div>
-                        <button className="flex items-center justify-center gap-2 bg-[#F47A1F]/20 hover:bg-[#F47A1F]/40 transition-colors text-white px-4 md:px-5 py-2 rounded-full border border-[#F47A1F] hover:border-[#F47A1F]">
-                          <LinkIcon size={14} className="flex-shrink-0" />
-                          <span className="font-medium text-sm">{t("Location")}</span>
-                        </button>
+                        {hasLocationUrl && (
+                          <a
+                            href={item.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center justify-center gap-2 bg-[#F47A1F]/20 hover:bg-[#F47A1F]/40 transition-colors text-white px-4 md:px-5 py-2 rounded-full border border-[#F47A1F] hover:border-[#F47A1F]"
+                          >
+                            <LinkIcon size={14} className="flex-shrink-0" />
+                            <span className="font-medium text-sm">{t("Location")}</span>
+                          </a>
+                        )}
                       </div>
                     </div>
-                  ))}
+                    );
+                  })}
                 </div>
               </motion.div>
 
@@ -337,7 +379,7 @@ const DesertTrip = () => {
                         <div className="text-white/90 text-base md:text-lg leading-relaxed font-medium">
                           {renderStyledText(t("paymentInfo"))}
                         </div>
-                        <div className="inline-block bg-[#F47A1F]/20 px-6 py-2 rounded-full border border-[#F47A1F]/30 text-[#F47A1F] font-bold text-sm md:text-base">
+                        <div className="inline-block bg-[#F47A1F]/20 px-6 py-2 border border-[#F47A1F]/30 text-[#F47A1F] font-bold text-sm md:text-base">
                           {renderStyledText(t("paymentMethods"))}
                         </div>
                       </div>
