@@ -73,7 +73,7 @@ const Home = () => {
           <div className="w-full md:w-1/2 md:min-w-0 flex flex-col md:overflow-hidden">
             <MediaSwiper
               customMedia={hotelGallery}
-              height="h-[400px] md:h-[460px]"
+              height="h-[400px] md:h-[550px]"
               className="w-full flex-1 min-h-0 pt-8 md:max-w-full"
               objectFit="cover"
               intervalDefault={5}
