@@ -247,7 +247,7 @@ export default function ContactForm() {
   `;
 
   const labelStyles = "flex items-center gap-3 cursor-pointer text-gray-300 hover:text-white transition-colors";
-
+ 
   const radioStyles = `
     w-5 h-5 appearance-none rounded-full border-2 border-[rgba(244,122,31,0.5)]
     checked:bg-[#F47A1F] checked:border-[#F47A1F]
@@ -333,7 +333,7 @@ export default function ContactForm() {
                 {fieldErrors.phone && <p className="text-red-500 text-sm mt-1">{fieldErrors.phone}</p>}
               </div>
 
-              <div>
+             {/*  <div>
                 <label className="block text-white mb-3 font-medium">{t("tripDate")}</label>
                 <div className="space-y-3">
                   {tripDateOptions.map((option) => (
@@ -350,7 +350,7 @@ export default function ContactForm() {
                   ))}
                 </div>
                 {fieldErrors.tripDate && <p className="text-red-500 text-sm mt-1">{fieldErrors.tripDate}</p>}
-              </div>
+              </div> */}
 
               <div>
                 <label className="block text-white mb-3 font-medium">

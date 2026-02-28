@@ -106,6 +106,11 @@ const DesertTrip = () => {
 
   const getTripData = (trip) => {
     const key = trip.translationKey;
+
+    const day1Activities = t.raw(`trips.${key}.itinerary.day1.activities`) || [];
+    const day2Activities = t.raw(`trips.${key}.itinerary.day2.activities`) || [];
+    const day3Activities = t.raw(`trips.${key}.itinerary.day3.activities`) || [];
+
     return {
       ...trip,
       title: t(`trips.${key}.title`),
@@ -115,23 +120,23 @@ const DesertTrip = () => {
       itinerary: [
         {
           day: t(`trips.${key}.itinerary.day1.title`),
-          activities: trip.itineraryIcons.day1.map((icon, i) => ({
-            icon,
-            text: t(`trips.${key}.itinerary.day1.activities.${i}`),
+          activities: day1Activities.map((text, i) => ({
+            icon: trip.itineraryIcons.day1?.[i] || null,
+            text,
           })),
         },
         {
           day: t(`trips.${key}.itinerary.day2.title`),
-          activities: trip.itineraryIcons.day2.map((icon, i) => ({
-            icon,
-            text: t(`trips.${key}.itinerary.day2.activities.${i}`),
+          activities: day2Activities.map((text, i) => ({
+            icon: trip.itineraryIcons.day2?.[i] || null,
+            text,
           })),
         },
         {
           day: t(`trips.${key}.itinerary.day3.title`),
-          activities: trip.itineraryIcons.day3.map((icon, i) => ({
-            icon,
-            text: t(`trips.${key}.itinerary.day3.activities.${i}`),
+          activities: day3Activities.map((text, i) => ({
+            icon: trip.itineraryIcons.day3?.[i] || null,
+            text,
           })),
         },
       ],
